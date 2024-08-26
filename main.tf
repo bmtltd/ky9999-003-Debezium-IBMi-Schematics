@@ -58,16 +58,6 @@ module "power" {
   location          = var.power_workspace_location
 }
 
-# Provision a subnet in the Power Virtual Server workspace
-module "power_subnet" {
-  source            = "./modules/power-subnet"
-  name              = format("%s-subnet", var.name)
-  resource_group_id = data.ibm_resource_group.group.id
-  workspace_id      = local.power_workspace.id
-  cidr_block        = var.power_subnet_cidr
-  zone              = var.power_workspace_location
-}
-
 locals {
   power_workspace = var.transit_gateway_name == "" ? var.power_workspace_name == "" ? module.power[0].workspace : data.ibm_resource_instance.power_workspace[0] : null
   per_enabled     = var.per_override ? true : local.location.per_enabled
