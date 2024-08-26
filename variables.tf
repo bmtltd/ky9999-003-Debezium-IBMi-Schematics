@@ -177,3 +177,21 @@ variable "per_override" {
   type        = bool
   default     = false
 }
+
+
+variable "ike_policy_id" {
+  description = <<-EOD
+    IKE Policy in IBM Cloud
+  EOD
+  type        = string
+  default     = ""
+}
+
+
+variable "ipsec_policy_id" {
+  description = <<-EOD
+    IKE Policy in IBM Cloud
+  EOD
+  type        = string
+  default     = ""
+}
