@@ -39,9 +39,6 @@ module "vpn" {
   identity_local         = var.identity_local
   identity_remote        = var.identity_remote
   vsi_vpn_ssh_key_name   = var.vsi_vpn_ssh_key_name
-
-  ike_policy_id          = var.ike_policy_id
-  ipsec_policy_id        = var.ipsec_policy_id
 }
 
 # If a power workspace name is provided, look it up
