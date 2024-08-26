@@ -195,3 +195,10 @@ variable "ipsec_policy_id" {
   type        = string
   default     = ""
 }
+
+
+variable "power_subnet_cidr" {
+  description = "CIDR block for the Power Virtual Server subnet"
+  type        = string
+  default     = ""
+}
